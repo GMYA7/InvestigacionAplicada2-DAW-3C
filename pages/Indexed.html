@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IndexedDB.</title>
+    <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <header class="hero3">
+            <nav class="nav container">
+                <div class="nav__logo">
+                    <h2 class="nav__title">Colegio Don Bosco.</h2>
+                </div>
+    
+                <ul class="nav__link nav__link--menu">
+                    <li class="nav__items">
+                        <a href="../index.html" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Local.html" class="nav__links">LocalStorage</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Session.html" class="nav__links">SessionStorage</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Indexed.html" class="nav__links">IndexedDB</a>
+                    </li>
+    
+                    <img src="./images/close.svg" class="nav__close">
+                </ul>
+    
+            </nav>
+            <section class="hero__container container">
+                <h1 class="hero__title">IndexedDB.</h1>
+                <p class="hero__paragraph">Conceptos básicos sobre IndexedDB con un ejemplo básico.</p>
+            </section>
+        </header>
+    
+        <main>
+            <section class="container about">
+                <h2 class="subtitle">¿Qué es IndexedDB en JavaScript?</h2>
+                <p class="about__paragraph">IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones pueden trabajar tanto en línea como fuera de línea.
+                    Toda esta potencia es normalmente excesiva para las aplicaciones cliente-servidor tradicionales. IndexedDB está previsto para aplicaciones fuera de línea, para ser combinado con ServiceWorkers y otras tecnologías.
+                    <br><br>
+                    IndexedDB no es más que un sistema de base de datos transaccionales que sirve para guardar la información estructurada en el propio navegador. Es ideal para almacenar abundantes cantidades de datos, como por ejemplo catálogos de productos, que requieren también de una búsqueda rápida de la información que hay en ellos. Además, IndexedDB, para ser usado con Progressive Web Apps, cuenta con la característica de ser asíncrono, por lo que no dificulta el acceso a la información mediante JavaScript.
+
+En una aplicación progresiva, guardaríamos en la Cache Storage esa información, pero podría resultar complicado en circunstancias como un CRUD (Create, Read, Update, Remove). En este caso, echaríamos mano de IndexedDB.
+                </p>
+    
+            </section>
+    
+            <section class="knowledge">
+                <div class="knowledge__container container">
+                    <div class="knowledege__texts">
+                        <h2 class="subtitle">Beneficios de IndexedDB</h2>
+                        <p class="about__paragraph">IndexedDB es una base de datos que está construida en el navegador y que es mucho mas potente que la herramienta LocalStorage, algunos puntos a favor de este son:</p>
+                    <ul>
+                        <li>Almacenamiento de casi todo tipo de valores.</li>
+                        <li>Soporte en transacciones para confiabilidad</li>
+                        <li>Soporta consultas de rango por claves e índices</li>
+                        <li>Capaz de almacenar mayor volumen de datos que LocalStorage</li>
+                    </ul>
+                        <p class="about__paragraph">Para crear o que nuestra aplicación cree una base de datos con este método se debe de seguir una serie de pasos, los principales son:</p>
+                        <a href="#ancla" class="cta">Imagen que contiene el esquema de IndexedDB</a>
+
+                    </div>
+    
+                    <figure class="knowledge__picture">
+                        <img src="../images/indexedDB.jpg" id="ancla" class="knowledge__imgesp">
+                    </figure>    
+                </div>
+             
+            </section>
+            <div class="knowledge__container2 container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">Paso 1: conectar o abrir base de datos</h2>
+                    <p class="knowledge__paragraph">Para eso utilizaremos la sintaxis que muestra la imagen, Donde “name” es el nombre de la base de datos y “versión” un entero positivo, predeterminado en 1.
+                    </p>
+                    <a href="#imga" class="cta">Ver imagen del lado para sintaxis</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="../images/inde.jpg" id="imga" class="knowledge__img">
+                </figure>  
+            </div>
+            <section class="knowledge">
+                <div class="knowledge__container container">
+                    <div class="knowledege__texts">
+                        <h2 class="subtitle">Paso 2: Manejo de los errores y enventos de la base de datos</h2>
+                        <p class="knowledge__paragraph">La llamada a la base de datos devuelve un objeto de tipo openRequest, y puede tener diversos tipos de eventos:</p>
+                       <ul>
+                        <li>OnSucces</li>
+                        <li>OnError</li>
+                        <li>OnUpgradeneeded </li>
+                       </ul>
+                       <strong>En caso de actualización</strong>
+                       <p class="knowledge__paragraph">
+                        En caso de que él se realice una actualización a la aplicación el segundo parámetro se convertiría en 2, y el funcionamiento requerido para verificar o actualizar en el lado del usuario seria (Ver segunda imagen):
+                        </p>
+                        <strong>Para borrar una base de datos</strong>
+
+                        <p class="knowledge__paragraph">
+                            Para borrar una base de datos IndexedDB es necesario seguir la sintaxis de la siguiente imagen:
+                        </p>
+                        <img src="../images/deleter.jpg" alt="">
+                    </div>
+    
+                    <figure class="knowledge__picture">
+                        <img src="../images/maenjo.jpg" class="knowledge__img" id="imgs">
+                        <br>
+                        <img src="../images/update.jpg" class="knowledge__img">
+
+                    </figure>    
+                </div>
+             
+            </section>
+            <div class="knowledge__container2 container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">Paso 3: Almacenamiento de objetos (Object Storage).</h2>
+                    <p class="knowledge__paragraph">Para almacenar algo en una base de datos de IndexedDB necesitamos un “almacén de objetos”, o lo que sería su equivalente en otras bases de datos “tablas” o “colecciones”. <br><br> Debe existir una “key” única para cada valor del almacén. <br><br>La sintaxis para crear un almacén de objetos es:
+                    </p>
+                    <img src="../images/datoObj.jpg" alt="">
+                    <ul>
+                       <li> Name: es el nombre del almacén</li>
+                        <li> keyOptions: objeto opcional con una de estas dos claves:
+                            <ul>
+                                <br>
+                        <li> keyPaht: ruta a una propiedad del objeto que IndexedDB usará como clave</li>
+                        <li>sautoIncrement: si es True, la clave para el objeto nuevo que se ingrese se generara automáticamente con un numero auto incrementable.</li>
+                   </ul>  </li> 
+                    </ul>   
+
+                    </div>
+
+                <figure class="knowledge__picture">
+                    <img src="../images/Database.jpg" id="database" class="knowledge__img">
+                   
+                </figure>  
+                
+            </div>
+            <section class="knowledge">
+                <div class="knowledge__container container">
+                    <div class="knowledege__texts">
+                        <h2 class="subtitle">Paso 4: Realizar trasacción.</h2>
+                        <p class="knowledge__paragraph">Este es un término genérico que se utiliza en muchas bases de datos, hace referencia a un conjunto de operaciones que deben operarse en simultaneo y, o bien todas dar un resultado exitoso o todas fallar, por ejemplo, cuando una persona compra algo:</p>
+                       <ul>
+                        <li>Resta dinero de su cuenta personal</li>
+                        <li>Agrega un item a su inventario</li>
+                       </ul>
+                       <p class="knowledge__paragraph">no es conveniente que la primera acción se realice con éxito y la segunda no, o viceversa, ambas deberían ser exitosas o ambas fallar.</p>
+                       <strong>Para iniciar transaccion</strong>
+                      <br> <img src="../images/transa.jpg" alt="">
+                      <ul>
+                        <li>Store: es el nombre del almacén donde la transacción va a acceder</li>
+                        <li>Type:  tipo de transacción puede ser:
+                    <ul><br>
+                        <li>Readonly: solo se puede leer</li>
+                        <li>Readwrite: puede leer o escribir datos</li>
+                    </ul>
+                    </li>
+                       </ul>
+                      
+                    </div>
+    
+                    <figure class="knowledge__picture">
+                        <img src="../images/repre.png" class="knowledge__img" id="imgs">
+                    </figure>    
+                </div>
+                </section>
+                <div class="knowledge__container2 container">
+                    <div class="knowledege__texts">
+                        <h2 class="subtitle">Finalmente quedan las busquedas</h2>
+                        <p class="knowledge__paragraph">Hay dos formas principales de hacer búsquedas dentro de un almacén de objetos
+                        Por clave o rango de claves: son objetos de tipo IDBkeyRange, que especifica un rango de claves aceptables:
+                            
+                        </p>
+                        <img src="../images/search.jpg" alt="">
+                       <p class="knowledge__paragraph">Existen también los métodos que aceptan un argumento “query” que puede ser una clave exacta o un rango de claves:</p>
+                       <img src="../images/dsa.jpg" alt="">
+    
+                    </div>
+    
+                    <figure class="knowledge__picture">
+                       
+                    </figure>  
+                    
+                </div>
+                <section class="knowledge">
+                    <div class="knowledge__container container">
+                        <div class="knowledege__texts">
+                            <h2 class="subtitle">Campo del objeto.</h2>
+                            <p class="knowledge__paragraph">Para poder buscar por otro campo del objeto necesitamos crear una estructura de datos adicional: llamada Índice “index”.
+
+                                El index es un agregado del almacén que rastrea un campo determinado del objeto dado, su sintaxis es:
+                                </p>
+                                <img src="../images/bus.jpg" id="imgs3">
+
+                          <ul>
+                            <li>Name: nombre del índice</li>
+                            <li>KeyPaht: ruta al campo del objeto que el índice debe seguir</li>
+                            <li>Option: un objeto opcional con las propiedades:
+                        <ul><br>
+                            <li>Unique: si es True un valor no podrá repetirse en el índice.</li>
+                            <li>multiEntry: solo se usa si el valor en KeyPaht es un array.</li>
+                        </ul>
+                        </li>
+                           </ul>
+                          
+                        </div>
+        
+                        <figure class="knowledge__picture">
+                            <img src="../images/ejeds.svg" class="knowledge__img" id="imgs">
+                        </figure>    
+                    </div>
+                    </section>
+                    <div class="knowledge__container2 container">
+                        <div class="knowledege__texts">
+                            <h2 class="subtitle">Ejemplo de IndexedDB</h2>
+                            <a href="IndexedEjemplo.html" target="_blank" class="cta">Entrar a la página que contiene el ejemplo</a>
+
+                            <h3>Código HTML</h3>
+                            <div class="gale">
+                            <img src="../images/htmIIndexed.jpg"  alt="html">
+                             <h3>Código JS</h3>
+                            <img src="../images/IndexJs.jpg" class="code" alt="html">
+                            <img src="../images/IndexJS2.jpg" class="code" alt="html">
+                            <img src="../images/indesjs3.jpg" class="code" alt="html">
+                            <img src="../images/indexjs4.jpg" class="code" alt="html">
+                        </div>
+                    </div>
+        </main>
+        <footer class="footer">
+            <section class="footer__container container">
+                <nav class="nav nav--footer">
+                    <h2 class="footer__title">Investigacion Aplicada.</h2>
+    
+                    <ul class="nav__link nav__link--menu">
+                        <li class="nav__items">
+                            <a href="#" class="nav__links">Inicio</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Local.html" class="nav__links">LocalStorage</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Session.html" class="nav__links">SessionStorage</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Indexed.html" class="nav__links">IndexedDB</a>
+                        </li>
+        
+                        <img src="./images/close.svg" class="nav__close">
+                    </ul>
+        
+                </nav>
+    
+              
+            </section>
+    
+            <section class="footer__copy container">
+               
+    
+                <h3 class="footer__copyright">Derechos reservados &copy; Colegio Don Bosco</h3>
+            </section>
+        </footer>
+</body>
+</html>

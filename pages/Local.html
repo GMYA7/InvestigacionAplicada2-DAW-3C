@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LocalStorage.</title>
+    <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <header class="hero2">
+            <nav class="nav container">
+                <div class="nav__logo">
+                    <h2 class="nav__title">Colegio Don Bosco.</h2>
+                </div>
+    
+                <ul class="nav__link nav__link--menu">
+                    <li class="nav__items">
+                        <a href="../index.html" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Local.html" class="nav__links">LocalStorage</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Session.html" class="nav__links">SessionStorage</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Indexed.html" class="nav__links">IndexedDB</a>
+                    </li>
+    
+                    <img src="./images/close.svg" class="nav__close">
+                </ul>
+    
+            </nav>
+            <section class="hero__container container">
+                <h1 class="hero__title">LocalStorage.</h1>
+                <p class="hero__paragraph">Conceptos básicos sobreel LocalStorage con un ejemplo básico.</p>
+            </section>
+        </header>
+    
+        <main>
+            <section class="container about">
+                <h2 class="subtitle">¿Qué es LocalStorage en JavaScript?</h2>
+                <p class="about__paragraph">LocalStorage es una herramienta que es compatible con HTML5 y los navegadores que le soportan, Guarda información que permanecerá almacenada por tiempo indefinido; sin importar que el navegador se cierre..
+                    Esta herramienta tiene la propiedad o capacidad de almacenar datos de manera local en el navegador el usuario este utilizando mientras navega. Dicha información quedara almacenada de manera permanente en cada sesión que inicie el usuario en su navegador, al menos que esta sea eliminada a propósito.
+                    El funcionamiento de LocalStorage se puede comparar con la manera de trabajo de las Cookies, sin embargo, este cuenta con 5mb de espacio y al hacerse de manera local no requiere hacer repeticiones de servidor.
+                    Sabiendo que LocalStorage es una herramienta que se utiliza vía JavaScript y nos permite manipular nuestros datos de la manera en que creamos mas conveniente, se debe tener en cuenta los métodos para utilizarlo:
+                    </p>
+    
+                
+            </section>
+    
+            <section class="knowledge">
+                <div class="knowledge__container container">
+                    <div class="knowledege__texts">
+                        <h2 class="subtitle">localStorage.setItem(“key”,item);</h2>
+                        <p class="knowledge__paragraph">En el primer parámetro “key”, se debe ingresar el nombre del elemento, y en el parámetro “item” se 
+                            debe ingresar el valor de este.
+                        <br><br>En este caso se esta guardando en el LocalStorage en elemento llamado “userId” con el valor de 15</p>
+                        <a href="#" class="cta">Ver imagen del lado para sintaxis</a>
+                    </div>
+    
+                    <figure class="knowledge__picture">
+                        <img src="../images/setitem.jpg" class="knowledge__img">
+                    </figure>    
+                </div>
+             
+            </section>
+            <div class="knowledge__container2 container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">localStorage.getItem("key");</h2>
+                    <p class="knowledge__paragraph">Este método nos sirve para obtener un valor almacenado en el LocalStorage donde “key”, es el nombre de este valor.
+                    <br><br>En este ejemplo la variable userId almacenara el valor que tienen el elemento de nombre “userId” en el LocalStorage.</p>
+                    <a href="#" class="cta">Ver imagen del lado para sintaxis</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="../images/getItem.jpg" class="knowledge__img">
+                </figure>  
+            </div>
+            <section class="knowledge">
+                <div class="knowledge__container container">
+                    <div class="knowledege__texts">
+                        <h2 class="subtitle">localStorage.removeItem("key");</h2>
+                        <p class="knowledge__paragraph">Este método sirve para eliminar del almacenamiento del LocalStorage, algún elemento, que se representa por “key”, donde “key” es su nombre.
+                        <br><br>Se elimina el elemento de nombre “userId”, del almacenamiento en LocalStorage, o almacenamiento local.</p>
+                        <a href="#" class="cta">Ver imagen del lado para sintaxis</a>
+                    </div>
+    
+                    <figure class="knowledge__picture">
+                        <img src="../images/delete.jpg" class="knowledge__img">
+                    </figure>    
+                </div>
+             
+            </section>
+            <div class="knowledge__container2 container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">Ejemplo de LocalStorage.</h2>
+                    <p class="knowledge__paragraph">Una vez que conocemos los escencial para iniciar a usar el LocalStorage pasaremos a ver un ejemplo en el cual registraremos un arreglo como parte de almacenamiento local por medio de un formulario.</p>
+                    <h2 class="subtitle">Paso 1.</h2>
+                    <p class="knowledge__paragraph">Primero iniciamos creando un formulario para poder crearlos campos que se ingresaran y almacenaran de manera local</p>
+                    <h2 class="subtitle">Paso 2.</h2>
+                    <p class="knowledge__paragraph">Una vez creado el formulario creamos un script básico en el que usaremos unicamente los metodo de setItem y getItem, estos se ejecutaran al activar la función crearUsario()</p>
+                        <h2 class="subtitle">Paso 3.</h2>
+                        <p class="knowledge__paragraph">Cuando tengamos el script creado solo faltaria probar y ejecuta el formulario el cual se aprecia en las siguiente imagenes (El formulario se diseño con Bootstrap)</p>
+                            <h2 class="subtitle">Paso 4.</h2>
+                            <p class="knowledge__paragraph">Solo falta en registrar un usuario, una vez hecho esto no alertara por medio de un "alert" y una vez muestre los datos podremos ir a ver a las herramienta de desarrollador para ver si en verdad almaceno, tal como muestra la imagen</p>
+                                                    <a href="LocalEjem.html" target="_blank" class="cta">Ir a página de ejemplo</a>
+
+                    </div>
+
+                <figure class="knowledge__picture">
+                    <img src="../images/codeht.jpg" class="knowledge__img">
+                    <img src="../images/codejs.jpg" class="knowledge__img">
+                    <img src="../images/pag.jpg" class="knowledge__img">
+                    <img src="../images/almac.jpg" class="knowledge__img">
+                </figure>  
+                
+            </div>
+        </main>
+        <footer class="footer">
+            <section class="footer__container container">
+                <nav class="nav nav--footer">
+                    <h2 class="footer__title">Investigacion Aplicada.</h2>
+    
+                    <ul class="nav__link nav__link--menu">
+                        <li class="nav__items">
+                            <a href="#" class="nav__links">Inicio</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Local.html" class="nav__links">LocalStorage</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Session.html" class="nav__links">SessionStorage</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Indexed.html" class="nav__links">IndexedDB</a>
+                        </li>
+        
+                        <img src="./images/close.svg" class="nav__close">
+                    </ul>
+        
+                </nav>
+    
+              
+            </section>
+    
+            <section class="footer__copy container">
+               
+    
+                <h3 class="footer__copyright">Derechos reservados &copy; Colegio Don Bosco</h3>
+            </section>
+        </footer>
+</body>
+</html>

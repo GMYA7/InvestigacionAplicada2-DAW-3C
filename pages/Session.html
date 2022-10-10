@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LocalStorage.</title>
+    <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <header class="hero4">
+            <nav class="nav container">
+                <div class="nav__logo">
+                    <h2 class="nav__title">Colegio Don Bosco.</h2>
+                </div>
+    
+                <ul class="nav__link nav__link--menu">
+                    <li class="nav__items">
+                        <a href="../index.html" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Local.html" class="nav__links">LocalStorage</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Session.html" class="nav__links">SessionStorage</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Indexed.html" class="nav__links">IndexedDB</a>
+                    </li>
+    
+                    <img src="./images/close.svg" class="nav__close">
+                </ul>
+    
+            </nav>
+            <section class="hero__container container">
+                <h1 class="hero__title">Session Storage.</h1>
+                <p class="hero__paragraph">Conceptos básicos sobre SessionStorage con un ejemplo básico en JavaScript.</p>
+            </section>
+        </header>
+    
+        <main>
+            <section class="container about">
+                <h2 class="subtitle">¿Qué es SessionStorage en JavaScript?</h2>
+                <p class="about__paragraph">La propiedad sessionStorage permite acceder a un objeto Storage
+                     asociado a la sesión actual. La propiedad sessionStorage es similar a localStorage,
+                      la única diferencia es que la información almacenada en localStorage no posee tiempo de expiración, por el contrario, la información almacenada en sessionStorage es eliminada al finalizar la sesión de la página. La sesión de la página perdura mientras el navegador se encuentra abierto, y se mantiene por sobre las recargas y reaperturas de la página. Abrir una página en una nueva pestaña o ventana iniciará una nueva sesión, lo que difiere en la forma en que trabajan las cookies de sesión.
+                    <br><br>
+                    Cuando abre una página en una nueva pestaña o ventana, el navegador web crea una nueva sesión.
+
+Si abre varias pestañas o ventanas con la misma URL, el navegador web crea una separada sessionStoragepara cada pestaña o ventana. Por lo tanto, no se puede acceder a los datos almacenados en una pestaña del navegador web en otra pestaña.
+
+Cuando cierra una pestaña o ventana, el navegador web finaliza la sesión y borra los datos del archivo sessionStorage.
+
+Los datos almacenados en el sessionStorageson específicos del protocolo de la página. Por ejemplo, un mismo sitio javascripttutorial.nettiene diferentes sessionStorageal acceder con las teclas httpy https.
+
+Dado que los sessionStoragedatos están vinculados a una sesión de servidor, solo están disponibles cuando se solicita una página desde un servidor. no está disponible cuando la sessionStoragepágina se ejecuta localmente sin un servidor.
+                    </p>
+    
+                
+            </section>
+    
+            <section class="knowledge">
+                <div class="knowledge__container container">
+                    <div class="knowledege__texts">
+                        <h2 class="subtitle">Información adicional de SessionStorage</h2>
+                        <h3>Ventajas de SessionStorage:</h3>
+                        <ul><li>El acceso a la información es rápido, dado que los datos se almacenan de la manera llave-valor
+                        </li></ul>
+                        <h3>Desventajas de SessionStorage:</h3>
+                        <ul><li>Los valores se pierden una vez que se cierra la ventana
+                        </li><li>Los valores que almacena no pueden ser compartidos entre más de una ventana</li></ul>
+                        <p class="knowledge__paragraph">Cuando los datos se actualizan en localStorage o en sessionStorage, se dispara el evento storage el cual es la interfaz Storage de la API de almacenamiento web provee acceso al almacenamiento de la sesión o al almacenamiento local para un dominio en particular, permitiéndote por ejemplo añadir, modificar o eliminar elementos de dato almacenados. Si deseas manipular el almacenamiento de sesión para un dominio, debes llamar al método Window.sessionStorage entonces cuando se dispara el evento storage con las propiedades:
+                            <ul>
+                            <li>key: la clave que ha cambiado, (null si se llama .clear()).</li>
+                            <li>oldValue: el anterior valor (null si se añade una clave).</li>
+                            <li>newValue: el nuevo valor (null si se borra una clave).</li>
+                            <li>url: la url del documento donde ha pasado la actualización.</li>
+                            <li>storageArea: bien el objeto localStorage o sessionStorage, donde se ha producido la actualización.</li>
+                        </ul>
+                            <br> <a href="#" class="cta">Ver imagen del lado para sintaxis</a>
+                    </div>
+    
+                    <figure class="knowledge__picture">
+                        <img src="../images/sessionS.jpg" class="knowledge__img">
+                        <img src="../images/devtools.png" class="knowledge__img">
+                        <img src="../images/manger.jpg" class="knowledge__img">
+
+                    </figure>    
+                </div>
+             
+            </section>
+            <div class="knowledge__container2 container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">Ejemplo de SessionStorage.</h2>
+                    <a href="ejemplo_SessionStorage.html" target="_blank" class="cta">Entrar a la página que contiene el ejemplo</a>
+                <p class="knowledge__paragraph">Al lado derecho tenemos un código sobre una aplicación que utiliza el sistema
+                    o la propiedad de SessionStorage para realizar el registro de un alumno a un equipo del Colegio Don Bosco, al alumno se le solicita la información,
+                    una vez la ingresa tendra acceso a la opciones de Inscribir equipo, Limpiar datos de la sesión y eliminar lista.
+                </p>
+                <h2 class="subtitle">Función Iniciar.</h2>
+                <p class="knowledge__paragraph">Con esta función lo que se hace es inicializar todos los controles para poder manejar los eventos de cada uno de ellos cuando esta función se ejecute. </p>
+                <h2 class="subtitle">Función Principal(Inscribir).</h2>
+                <p class="knowledge__paragraph">Lo primero que se hacer ejecutarse esta función es comprobar si nuestro navegador soporta este tipo de almacenamiento por medio de SessionStorage,
+                     al igual que de una vez se comprueba que dentro del navegador se encunetre el objeto Storage <br><br>
+                    Con la estructura for lo que se hace es obtener cada uno de los valores ya sea los que estan ingresados por medio de un input de tipo text
+                o una etiqueta select. <br><br>
+            Luego utilizamos el primero metodo que es para Almacenar el valor por medio de setItem y con el metodo de JSON.stringify convertmos todos los datos en un arreglo,
+            este arreglo l momento de enviarlo al navegador hace que el arreglo original
+            se haga un string separado con "," <br><br> Casi finalizando utilizaremos un metodo para mostrar los datos en tabla primero tenemos que usar el método
+        JSON.parse y mandarle como parametro un "getItem" para que podamos obtener el valor. <br><br>
+    Para imprimir los valores hacemos un recorrido de los 4 valores que se le solicitan al usuario para generar un campo de tabla por cada elemento que se vaya a imprimir, el console.log se utiliza para visualizar que el arreglo creado</p>
+    <h2 class="subtitle">Función Limpiar y Eliminar Lista.</h2>
+    <p class="knowledge__paragraph">Con la función Limpiar lo único que hacemos es utilizar la propiedad del SessionStorage.removeItem para que se limpien todos los datos de la sesion 
+        y finalmente con la otra función unicamente agregamos espacios en blanco para que la tabla se limpie.
+    </p>
+
+     
+            </div>
+
+                <figure class="knowledge__picture">
+                    <img src="../images/ejemploSession1.jpg" class="knowledge__img3">
+                    <img src="../images/EjemploSession2.jpg" class="knowledge__img3">
+                    <img src="../images/EjemploSession3.jpg" class="knowledge__img3">
+                    <img src="../images/EjemploSession4.jpg" class="knowledge__img3">
+                </figure>  
+            </div>
+          
+           
+        </main>
+        <footer class="footer">
+            <section class="footer__container container">
+                <nav class="nav nav--footer">
+                    <h2 class="footer__title">Investigacion Aplicada.</h2>
+    
+                    <ul class="nav__link nav__link--menu">
+                        <li class="nav__items">
+                            <a href="#" class="nav__links">Inicio</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Local.html" class="nav__links">LocalStorage</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Session.html" class="nav__links">SessionStorage</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="Indexed.html" class="nav__links">IndexedDB</a>
+                        </li>
+        
+                        <img src="./images/close.svg" class="nav__close">
+                    </ul>
+        
+                </nav>
+    
+              
+            </section>
+    
+            <section class="footer__copy container">
+               
+    
+                <h3 class="footer__copyright">Derechos reservados &copy; Colegio Don Bosco</h3>
+            </section>
+        </footer>
+</body>
+</html>

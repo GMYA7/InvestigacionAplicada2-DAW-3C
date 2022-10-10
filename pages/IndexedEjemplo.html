@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexedDB</title>
+    <link rel="stylesheet" href="../css/estiloEj3.css">
+</head>
+<body>
+    <div class="container">
+        <br><br><h1 class="tittle">Registrar alumno:</h1><br>
+    <form id="form" class="form">
+        <label for="alumno"><b>Nombres</b></label>
+        <input type="text" name="alumno">
+        <label for="apellido"><b>Apellidos</b></label>
+        <input type="text" name="apellido">
+        <label for="codigo"><b>Codigo</b></label>
+        <input type="text" name="codigo">
+        <label for="codigo"><b>Año</b></label>
+        <select name="grado">
+            <option value="Primero">Primer año</option>
+            <option value="Segundo">Segundo año</option>
+            <option value="Tercero">Tercer año</option>
+        </select>
+        <br><br><button class="button">Agregar alumno</button><br><br>
+    </form>
+    <h1 class="tittle">Alumnos:</h1>
+    <div id="alumnosListado"></div>
+    </div>
+    
+</body>
+<script src="../js/IndexedDB.js"></script>
+</html>

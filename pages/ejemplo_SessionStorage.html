@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Inscripccion de equipos</title>
+</head>
+<body class="bg-info">
+    <div class="mt-5">
+        <h1 class="text-center">Inscripcion a Torneo de Futbol</h1>
+    </div>
+
+   <div class="m-0 vh-100 row justify-content-center aling-items-center">
+        <div class="col-auto ">
+        <form action="" onsubmit="return false;" class="bg-primary p-5 mb-3">
+
+            <div class="input-group mb-3 bg-success w-100 ">
+                <span class="input-group-text" id="basic-addon1">Nombre del Equipo</span>
+                <input type="text" id="nombreTeam" name="nombreTeam" class="form-control" placeholder="Nombre del equipo" aria-label="Nombre del equipo" aria-describedby="basic-addon1">
+            </div>
+    
+            <div class="input-group mb-3 bg-success w-100">
+                <span class="input-group-text" id="basic-addon1">Numero de participantes</span>
+                <input  type="number" name="cantJugadores" id="cantJugadores" class="form-control" placeholder="Numero de participantes" aria-label="Numero de participantes" aria-describedby="basic-addon1">
+            </div>
+            <select name="categoriaTeam" id="categoriaTeam" class="form-select  w-100" aria-label="Default select example">
+                <option selected>Categoria del equipo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenil">Femenil</option>
+                <option value="Infantil">Infantil</option>
+            </select>
+            <br>
+            <select name="depTeam" id="depTeam" class="form-select  w-100" aria-label="Default select example">
+                <option selected>Departamento del equipo</option>
+                <option value="Ahuachapan">Ahuachapan</option>
+                <option value="Santa Ana">Santa Ana</option>
+                <option value="Sonsonate">Sonsonate</option>
+                <option value="Chalatenango">Chalatenango</option>
+                <option value="San Salvador">San Salvador</option>
+                <option value="La Libertad">La Libertad</option>
+                <option value="La paz">La paz</option>
+                <option value="Cuscatlan">Cuscatlan</option>
+                <option value="Cabañas">Cabañas</option>
+                <option value="San Vicente">San Vicente</option>
+                <option value="San Miguel">San Miguel</option>
+                <option value="Usulutan">Usulutan</option>
+                <option value="Morazan">Morazan</option>
+                <option value="La Union">La Union</option>
+            </select>
+            <input type="submit" name="registrar" id="registrar" value="inscribir equipo" class="btn btn-danger mt-4">
+            <input type="submit" name="limpiar" id="limpiar" value="Limpiar datos de session" class="btn btn-danger mt-4 ">
+            <input type="submit" name="clearList" id="clearList" value="Eliminar Lista" class="btn btn-danger mt-4 ">
+        </form>
+            <h2 class="text-center">Equipos Inscritos</h2>
+            <div id="detalles" class="mt-5 bg-dark text-white p-5">
+               
+            </div>
+        </div>
+   </div>
+    
+</body>
+    <script src="../js/sessionStorage.js-"></script>
+</html>
