@@ -4,13 +4,14 @@ function crearUsuario(){
     var correo = document.getElementById("correo").value;
     var telefono = document.getElementById("tel").value;
 
-    var usuario = {
+    var usuario={
         nombre : nombre,
         apellido : apellido,
         correo: correo,
         telefono: telefono
     }; 
-    var cadenaUsuario = JSON.stringify(usuario);
+    
+    var cadenaUsuario=JSON.stringify(usuario);
     localStorage.setItem(nombre, cadenaUsuario);
     var nome =  localStorage.getItem(nombre);
     console.log(nome);
