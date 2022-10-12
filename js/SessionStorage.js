@@ -1,7 +1,7 @@
 function iniciar(){
     //Funcion para inicializar todos los eventos
     var btnTorneo = document.getElementById('registrar');
-    var btnLimpiar = document.getElementById('limpiar');
+    var btnLimpiar = document.getElementById('limpiar');    //CON ESTAS VARIABLES PODREMOS RECIBIR LAS ACCIONES DE LOS BOTONES
     var btnClearLista = document.getElementById('clearList');
 
     if(btnTorneo.addEventListener){
@@ -60,7 +60,7 @@ function inscribir(){
         //CON .getItem logramos obtener lo almacenado en el navegador y con el JSON.PARSE lo
         // convertimos a un arreglo
         
-        //impresion de los datos
+        //impresion de los datos con el for segun el numero de posiciones del arreglo
         for( var j = 0; j<4 ; j++){
             if(j == 0){
         var result = document.getElementById('detalles').innerHTML += "<br>";
