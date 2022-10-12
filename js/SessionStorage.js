@@ -1,7 +1,7 @@
 function iniciar(){
     //Funcion para inicializar todos los eventos
     var btnTorneo = document.getElementById('registrar');
-    var btnLimpiar = document.getElementById('limpiar');    //Con esteos botones lograremos nosotros recibir los eventos de los botones
+    var btnLimpiar = document.getElementById('limpiar');    //Con estos botones lograremos nosotros recibir los eventos de los botones
     var btnClearLista = document.getElementById('clearList');
 
     if(btnTorneo.addEventListener){
