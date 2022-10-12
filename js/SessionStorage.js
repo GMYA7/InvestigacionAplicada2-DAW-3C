@@ -1,8 +1,8 @@
 function iniciar(){
     //Funcion para inicializar todos los eventos
-    var btnTorneo = document.getElementById('registrar');
-    var btnLimpiar = document.getElementById('limpiar');
-    var btnClearLista = document.getElementById('clearList');
+    var btnTorneo = document.getElementById('registrar'); //varirable la cual va identificar el boton de inscribir el equipo
+    var btnLimpiar = document.getElementById('limpiar');  //varirable la cual va identificar el boton de limpiar los datos del storage
+    var btnClearLista = document.getElementById('clearList'); //varirable la cual va identificar el boton de crear lista q eliminara la lista
 
     if(btnTorneo.addEventListener){
             btnTorneo.addEventListener("click", inscribir, false);
@@ -60,7 +60,7 @@ function inscribir(){
         //CON .getItem logramos obtener lo almacenado en el navegador y con el JSON.PARSE lo
         // convertimos a un arreglo
         
-        //impresion de los datos
+        //impresion de los datos con el for el cual nos alundara con los inners HTML a hacerlo
         for( var j = 0; j<4 ; j++){
             if(j == 0){
         var result = document.getElementById('detalles').innerHTML += "<br>";
