@@ -43,12 +43,19 @@
         <main>
             <section class="container about">
                 <h2 class="subtitle">¿Qué es IndexedDB en JavaScript?</h2>
-                <p class="about__paragraph">IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones pueden trabajar tanto en línea como fuera de línea.
-                    Toda esta potencia es normalmente excesiva para las aplicaciones cliente-servidor tradicionales. IndexedDB está previsto para aplicaciones fuera de línea, para ser combinado con ServiceWorkers y otras tecnologías.
+                <p class="about__paragraph">IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la 
+                    creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones 
+                    pueden trabajar tanto en línea como fuera de línea.
+                    Toda esta potencia es normalmente excesiva para las aplicaciones cliente-servidor tradicionales. IndexedDB está previsto para aplicaciones 
+                    fuera de línea, para ser combinado con ServiceWorkers y otras tecnologías.
                     <br><br>
-                    IndexedDB no es más que un sistema de base de datos transaccionales que sirve para guardar la información estructurada en el propio navegador. Es ideal para almacenar abundantes cantidades de datos, como por ejemplo catálogos de productos, que requieren también de una búsqueda rápida de la información que hay en ellos. Además, IndexedDB, para ser usado con Progressive Web Apps, cuenta con la característica de ser asíncrono, por lo que no dificulta el acceso a la información mediante JavaScript.
+                    IndexedDB no es más que un sistema de base de datos transaccionales que sirve para guardar la información estructurada en el propio 
+                    navegador. Es ideal para almacenar abundantes cantidades de datos, como por ejemplo catálogos de productos, que requieren también 
+                    de una búsqueda rápida de la información que hay en ellos. Además, IndexedDB, para ser usado con Progressive Web Apps, cuenta con 
+                    la característica de ser asíncrono, por lo que no dificulta el acceso a la información mediante JavaScript.
 
-En una aplicación progresiva, guardaríamos en la Cache Storage esa información, pero podría resultar complicado en circunstancias como un CRUD (Create, Read, Update, Remove). En este caso, echaríamos mano de IndexedDB.
+                    En una aplicación progresiva, guardaríamos en la Cache Storage esa información, pero podría resultar complicado en circunstancias como un CRUD 
+                    (Create, Read, Update, Remove). En este caso, echaríamos mano de IndexedDB.
                 </p>
     
             </section>
@@ -57,14 +64,16 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
                 <div class="knowledge__container container">
                     <div class="knowledege__texts">
                         <h2 class="subtitle">Beneficios de IndexedDB</h2>
-                        <p class="about__paragraph">IndexedDB es una base de datos que está construida en el navegador y que es mucho mas potente que la herramienta LocalStorage, algunos puntos a favor de este son:</p>
+                        <p class="about__paragraph">IndexedDB es una base de datos que está construida en el navegador y que es mucho mas potente que la 
+                            herramienta LocalStorage, algunos puntos a favor de este son:</p>
                     <ul>
                         <li>Almacenamiento de casi todo tipo de valores.</li>
                         <li>Soporte en transacciones para confiabilidad</li>
                         <li>Soporta consultas de rango por claves e índices</li>
                         <li>Capaz de almacenar mayor volumen de datos que LocalStorage</li>
                     </ul>
-                        <p class="about__paragraph">Para crear o que nuestra aplicación cree una base de datos con este método se debe de seguir una serie de pasos, los principales son:</p>
+                        <p class="about__paragraph">Para crear o que nuestra aplicación cree una base de datos con este método se debe de seguir una 
+                            serie de pasos, los principales son:</p>
                         <a href="#ancla" class="cta">Imagen que contiene el esquema de IndexedDB</a>
 
                     </div>
@@ -78,7 +87,8 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
             <div class="knowledge__container2 container">
                 <div class="knowledege__texts">
                     <h2 class="subtitle">Paso 1: conectar o abrir base de datos</h2>
-                    <p class="knowledge__paragraph">Para eso utilizaremos la sintaxis que muestra la imagen, Donde “name” es el nombre de la base de datos y “versión” un entero positivo, predeterminado en 1.
+                    <p class="knowledge__paragraph">Para eso utilizaremos la sintaxis que muestra la imagen, Donde “name” es el nombre de la base 
+                        de datos y “versión” un entero positivo, predeterminado en 1.
                     </p>
                     <a href="#imga" class="cta">Ver imagen del lado para sintaxis</a>
                 </div>
@@ -91,7 +101,8 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
                 <div class="knowledge__container container">
                     <div class="knowledege__texts">
                         <h2 class="subtitle">Paso 2: Manejo de los errores y enventos de la base de datos</h2>
-                        <p class="knowledge__paragraph">La llamada a la base de datos devuelve un objeto de tipo openRequest, y puede tener diversos tipos de eventos:</p>
+                        <p class="knowledge__paragraph">La llamada a la base de datos devuelve un objeto de tipo openRequest, y puede tener diversos 
+                            tipos de eventos:</p>
                        <ul>
                         <li>OnSucces</li>
                         <li>OnError</li>
@@ -99,7 +110,8 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
                        </ul>
                        <strong>En caso de actualización</strong>
                        <p class="knowledge__paragraph">
-                        En caso de que él se realice una actualización a la aplicación el segundo parámetro se convertiría en 2, y el funcionamiento requerido para verificar o actualizar en el lado del usuario seria (Ver segunda imagen):
+                        En caso de que él se realice una actualización a la aplicación el segundo parámetro se convertiría en 2, y el funcionamiento 
+                           requerido para verificar o actualizar en el lado del usuario seria (Ver segunda imagen):
                         </p>
                         <strong>Para borrar una base de datos</strong>
 
@@ -121,7 +133,9 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
             <div class="knowledge__container2 container">
                 <div class="knowledege__texts">
                     <h2 class="subtitle">Paso 3: Almacenamiento de objetos (Object Storage).</h2>
-                    <p class="knowledge__paragraph">Para almacenar algo en una base de datos de IndexedDB necesitamos un “almacén de objetos”, o lo que sería su equivalente en otras bases de datos “tablas” o “colecciones”. <br><br> Debe existir una “key” única para cada valor del almacén. <br><br>La sintaxis para crear un almacén de objetos es:
+                    <p class="knowledge__paragraph">Para almacenar algo en una base de datos de IndexedDB necesitamos un “almacén de objetos”, o lo 
+                        que sería su equivalente en otras bases de datos “tablas” o “colecciones”. <br><br> Debe existir una “key” única para cada valor 
+                        del almacén. <br><br>La sintaxis para crear un almacén de objetos es:
                     </p>
                     <img src="../images/datoObj.jpg" alt="">
                     <ul>
@@ -130,7 +144,8 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
                             <ul>
                                 <br>
                         <li> keyPaht: ruta a una propiedad del objeto que IndexedDB usará como clave</li>
-                        <li>sautoIncrement: si es True, la clave para el objeto nuevo que se ingrese se generara automáticamente con un numero auto incrementable.</li>
+                        <li>sautoIncrement: si es True, la clave para el objeto nuevo que se ingrese se generara automáticamente con un numero 
+                            auto incrementable.</li>
                    </ul>  </li> 
                     </ul>   
 
@@ -146,12 +161,15 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
                 <div class="knowledge__container container">
                     <div class="knowledege__texts">
                         <h2 class="subtitle">Paso 4: Realizar trasacción.</h2>
-                        <p class="knowledge__paragraph">Este es un término genérico que se utiliza en muchas bases de datos, hace referencia a un conjunto de operaciones que deben operarse en simultaneo y, o bien todas dar un resultado exitoso o todas fallar, por ejemplo, cuando una persona compra algo:</p>
+                        <p class="knowledge__paragraph">Este es un término genérico que se utiliza en muchas bases de datos, hace referencia a un 
+                            conjunto de operaciones que deben operarse en simultaneo y, o bien todas dar un resultado exitoso o todas fallar, por ejemplo, 
+                            cuando una persona compra algo:</p>
                        <ul>
                         <li>Resta dinero de su cuenta personal</li>
                         <li>Agrega un item a su inventario</li>
                        </ul>
-                       <p class="knowledge__paragraph">no es conveniente que la primera acción se realice con éxito y la segunda no, o viceversa, ambas deberían ser exitosas o ambas fallar.</p>
+                       <p class="knowledge__paragraph">no es conveniente que la primera acción se realice con éxito y la segunda no, o viceversa, ambas 
+                           deberían ser exitosas o ambas fallar.</p>
                        <strong>Para iniciar transaccion</strong>
                       <br> <img src="../images/transa.jpg" alt="">
                       <ul>
@@ -179,7 +197,8 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
                             
                         </p>
                         <img src="../images/search.jpg" alt="">
-                       <p class="knowledge__paragraph">Existen también los métodos que aceptan un argumento “query” que puede ser una clave exacta o un rango de claves:</p>
+                       <p class="knowledge__paragraph">Existen también los métodos que aceptan un argumento “query” que puede ser una clave exacta o 
+                           un rango de claves:</p>
                        <img src="../images/dsa.jpg" alt="">
     
                     </div>
@@ -193,7 +212,8 @@ En una aplicación progresiva, guardaríamos en la Cache Storage esa informació
                     <div class="knowledge__container container">
                         <div class="knowledege__texts">
                             <h2 class="subtitle">Campo del objeto.</h2>
-                            <p class="knowledge__paragraph">Para poder buscar por otro campo del objeto necesitamos crear una estructura de datos adicional: llamada Índice “index”.
+                            <p class="knowledge__paragraph">Para poder buscar por otro campo del objeto necesitamos crear una estructura de datos adicional: 
+                                llamada Índice “index”.
 
                                 El index es un agregado del almacén que rastrea un campo determinado del objeto dado, su sintaxis es:
                                 </p>
